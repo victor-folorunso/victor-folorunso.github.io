@@ -1,0 +1,479 @@
+/*
+  Folorunso Victor Wonderful, portfolio.
+
+  One page, no build step, no dependencies. Everything here is plain CSS so the
+  file can be opened by double clicking it, edited in any editor, and hosted
+  anywhere without a toolchain.
+
+  The look: a light editorial ground with a deep green accent and a serif for
+  headings. Deliberately not the dark terminal palette every developer portfolio
+  reaches for, because the reader is usually a hiring manager rather than
+  another engineer, and this has to survive being printed to PDF and forwarded.
+*/
+
+:root {
+  --paper:      #fdfcfa;
+  --paper-alt:  #f4f1ec;
+  --ink:        #16171b;
+  --ink-soft:   #4e5057;
+  --ink-faint:  #8a8b91;
+  --line:       #e2ded6;
+  --accent:     #0b6b53;
+  --accent-ink: #ffffff;
+  --accent-soft:#e6f2ee;
+  --dark:       #121417;
+
+  --wrap: 1120px;
+  --serif: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* The dark side is a genuine second design rather than an inversion. The green
+   is lifted, because a deep green on near black is nearly unreadable. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper:      #101216;
+    --paper-alt:  #171a1f;
+    --ink:        #eceae5;
+    --ink-soft:   #a9adb5;
+    --ink-faint:  #7b8089;
+    --line:       #262a31;
+    --accent:     #4fbf9b;
+    --accent-ink: #0c1512;
+    --accent-soft:#16332b;
+    --dark:       #080a0c;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition: none !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 10px 16px;
+  border-radius: 8px;
+  z-index: 100;
+}
+.skip:focus { left: 16px; top: 16px; }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 28px; }
+.wrap-narrow { max-width: 720px; }
+
+/* ── Bar ───────────────────────────────────────────────────────────────── */
+
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.bar-in {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 28px;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.mark { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+.mark-badge {
+  width: 32px; height: 32px;
+  display: grid; place-items: center;
+  border-radius: 9px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 17px;
+}
+.mark-name { font-weight: 600; letter-spacing: -0.01em; }
+
+.nav { display: flex; align-items: center; gap: 26px; font-size: 15px; }
+.nav a { color: var(--ink-soft); text-decoration: none; }
+.nav a:hover { color: var(--ink); }
+.nav a.is-current { color: var(--accent); }
+.nav-cta {
+  background: var(--accent);
+  color: var(--accent-ink) !important;
+  padding: 7px 15px;
+  border-radius: 8px;
+}
+.nav-cta:hover { opacity: 0.9; }
+@media (max-width: 700px) {
+  .mark-name { display: none; }
+  .nav { gap: 16px; font-size: 14px; }
+}
+
+/* ── Hero ──────────────────────────────────────────────────────────────── */
+
+.hero { padding: 84px 0 76px; }
+.hero-in {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 28px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.9fr);
+  gap: 60px;
+  align-items: center;
+}
+.eyebrow {
+  margin: 0 0 18px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.hero h1 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 5.2vw, 3.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+.lede {
+  margin: 26px 0 0;
+  max-width: 33rem;
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+}
+.hero-actions { margin: 32px 0 0; display: flex; flex-wrap: wrap; gap: 12px; }
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-quiet {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.portrait { margin: 0; }
+.portrait img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+}
+
+@media (max-width: 860px) {
+  .hero { padding: 52px 0 44px; }
+  .hero-in { grid-template-columns: 1fr; gap: 36px; }
+  .portrait { max-width: 320px; }
+}
+
+/* ── Bands ─────────────────────────────────────────────────────────────── */
+
+.band { padding: 76px 0; border-top: 1px solid var(--line); }
+.band-alt { background: var(--paper-alt); }
+
+.sec-title {
+  margin: 0 0 44px;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.9rem;
+  letter-spacing: -0.015em;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+.sec-num {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+
+/* ── Projects ──────────────────────────────────────────────────────────── */
+
+/* Two columns of text rather than the alternating picture layout the first
+   draft used. The brief asks for photographs of the person, not screenshots of
+   the work, so the pictures moved to their own section and these went denser. */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 40px 56px;
+}
+
+.project-head { margin-bottom: 12px; }
+.project h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.6rem;
+  letter-spacing: -0.015em;
+}
+.role {
+  margin: 4px 0 0;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.project-what { margin: 0 0 16px; font-size: 1rem; }
+
+.points { margin: 0; padding: 0; list-style: none; }
+.points li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+.points li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0.6em;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.tags { margin: 18px 0 0; display: flex; flex-wrap: wrap; gap: 7px; }
+.tags span {
+  padding: 4px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  background: var(--paper);
+}
+
+/* ── Gallery ───────────────────────────────────────────────────────────── */
+
+.life-lede { margin: -28px 0 32px; color: var(--ink-soft); max-width: 34rem; }
+
+/* Masonry style columns, because the photographs are a mix of portrait and
+   landscape and a fixed grid would either crop them badly or leave holes. */
+.gallery {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  columns: 3;
+  column-gap: 18px;
+}
+.gallery li { break-inside: avoid; margin-bottom: 18px; }
+
+.tile {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--paper-alt);
+  cursor: zoom-in;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.tile:hover { transform: translateY(-3px); box-shadow: 0 10px 26px rgba(0,0,0,0.12); }
+.tile img { width: 100%; display: block; }
+
+@media (max-width: 900px) { .gallery { columns: 2; } }
+@media (max-width: 560px) { .gallery { columns: 1; } }
+
+/* ── Lightbox ──────────────────────────────────────────────────────────── */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px;
+  background: rgba(8, 9, 11, 0.93);
+  backdrop-filter: blur(3px);
+}
+.lightbox[hidden] { display: none; }
+
+.lb-figure { margin: 0; max-width: min(1100px, 100%); text-align: center; }
+.lb-figure img {
+  max-width: 100%;
+  max-height: 78vh;
+  width: auto;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.lb-figure figcaption {
+  margin-top: 14px;
+  color: #d6d4cf;
+  font-size: 0.95rem;
+}
+
+.lb-close, .lb-nav {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #fff;
+  border-radius: 999px;
+  cursor: pointer;
+  line-height: 1;
+  transition: background 0.15s ease;
+}
+.lb-close:hover, .lb-nav:hover { background: rgba(255,255,255,0.22); }
+.lb-close {
+  position: absolute;
+  top: 18px; right: 18px;
+  width: 42px; height: 42px;
+  font-size: 26px;
+}
+.lb-nav { width: 46px; height: 46px; flex: none; font-size: 28px; }
+
+@media (max-width: 620px) {
+  .lb-nav {
+    position: absolute;
+    bottom: 22px;
+  }
+  .lb-prev { left: 26%; }
+  .lb-next { right: 26%; }
+  .lb-figure img { max-height: 66vh; }
+}
+
+/* ── Stack ─────────────────────────────────────────────────────────────── */
+
+.stack {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px 40px;
+}
+.stack > div { border-top: 1px solid var(--line); padding-top: 14px; }
+.stack dt {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.stack dd { margin: 6px 0 0; color: var(--ink-soft); }
+
+/* ── How I work ────────────────────────────────────────────────────────── */
+
+.big {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin: 0 0 22px;
+  text-wrap: pretty;
+}
+#how p:not(.big) { color: var(--ink-soft); margin: 0; }
+
+/* ── Contact ───────────────────────────────────────────────────────────── */
+
+.band-dark {
+  background: var(--dark);
+  color: #f2f0ec;
+  border-top: 0;
+}
+.contact-title {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2rem, 4.4vw, 2.9rem);
+  letter-spacing: -0.02em;
+}
+.contact-sub { margin: 14px 0 0; color: #a7a9a5; max-width: 32rem; }
+.contact-links {
+  margin: 30px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 30px;
+}
+.contact-links a {
+  color: #f2f0ec;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(242, 240, 236, 0.32);
+  padding-bottom: 2px;
+}
+.contact-links a:hover { border-bottom-color: currentColor; }
+
+/* ── Foot ──────────────────────────────────────────────────────────────── */
+
+.foot {
+  padding: 26px 0;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+  color: var(--ink-faint);
+}
+.foot .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.foot p { margin: 0; }
+.foot a { color: inherit; text-decoration: none; }
+.foot a:hover { color: var(--ink); }
+
+/* ── Reveal ────────────────────────────────────────────────────────────── */
+
+/* Applied by script.js only, so with JavaScript off everything is visible
+   rather than permanently transparent. */
+.reveal { opacity: 0; transform: translateY(14px); }
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* ── Print ─────────────────────────────────────────────────────────────── */
+
+@media print {
+  /* Anything mid reveal is still at opacity 0, and print never scrolls, so
+     without this a PDF loses whole sections. Found by screenshotting the full
+     page: the n8n project, the entire stack and one heading were blank. */
+  .reveal { opacity: 1 !important; transform: none !important; }
+
+  .bar, .hero-actions, .foot a, .skip, .lightbox, .life-lede { display: none; }
+  body { font-size: 11pt; background: #fff; color: #000; }
+  .band, .hero { padding: 18pt 0; break-inside: avoid; }
+  .projects { display: block; }
+  .project { break-inside: avoid; margin-bottom: 14pt; }
+  .gallery { columns: 2; }
+  .band-dark { background: #fff; color: #000; }
+  .contact-links a { color: #000; }
+}

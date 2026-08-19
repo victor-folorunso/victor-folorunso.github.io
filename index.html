@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Folorunso Victor Wonderful — Flutter and Supabase Engineer</title>
+<meta name="description" content="Flutter and Supabase engineer in Oyo. I build production mobile and web applications, from Postgres schema and row level security through to shipped UI.">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Folorunso Victor Wonderful, Flutter and Supabase Engineer">
+<meta property="og:description" content="I build production mobile and web applications on Flutter and Supabase, from schema and row level security through to shipped UI.">
+<meta property="og:image" content="images/portrait.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="favicon-180.png">
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Folorunso Victor Wonderful",
+  "jobTitle": "Flutter and Supabase Engineer",
+  "email": "victorfolorunsoofficial@gmail.com",
+  "url": "https://github.com/victor-folorunso",
+  "address": { "@type": "PostalAddress", "addressLocality": "Oyo", "addressCountry": "NG" },
+  "knowsAbout": ["Flutter", "Dart", "Supabase", "PostgreSQL", "SvelteKit", "TypeScript", "Cloudflare Workers"]
+}
+</script>
+</head>
+
+<body>
+<a class="skip" href="#work">Skip to work</a>
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="mark" href="#top">
+      <span class="mark-badge">V</span>
+      <span class="mark-name">Folorunso Victor</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#stack">Stack</a>
+      <a href="#how">How I work</a>
+      <a href="#life">Life</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-in">
+      <div class="hero-text">
+        <p class="eyebrow">Oyo, Nigeria &middot; Remote, UTC+1</p>
+        <h1>I build production apps on <em>Flutter</em> and <em>Supabase</em>.</h1>
+        <p class="lede">
+          From Postgres schema and row level security through to shipped UI. Recent
+          work: a payments platform with per-kilobyte metering and a wallet ledger,
+          a patient adherence app keeping doctor and patient views in sync, and a
+          computer vision product I prototyped end to end.
+        </p>
+        <p class="hero-actions">
+          <a class="btn" href="mailto:victorfolorunsoofficial@gmail.com">Get in touch</a>
+          <a class="btn btn-quiet" href="https://github.com/victor-folorunso" target="_blank" rel="noopener">GitHub</a>
+        </p>
+      </div>
+
+      <figure class="portrait">
+        <img src="images/portrait.jpg"
+             srcset="images/portrait-small.jpg 700w, images/portrait.jpg 1400w"
+             sizes="(max-width: 860px) 320px, 38vw"
+             alt="Folorunso Victor Wonderful" width="1400" height="1863">
+      </figure>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work" class="band">
+    <div class="wrap">
+      <h2 class="sec-title"><span class="sec-num">01</span> Selected work</h2>
+
+      <div class="projects">
+        <article class="project">
+          <header class="project-head">
+            <h3>Cladior</h3>
+            <p class="role">Founder and sole engineer &middot; 2026</p>
+          </header>
+          <p class="project-what">
+            Payments platform giving third party apps metered billing, shared sign in,
+            saved preferences, a community forum and an app store.
+          </p>
+          <ul class="points">
+            <li>
+              Built the metering proxy on Cloudflare Workers: per-kilobyte accounting,
+              wallet debits inside a single transaction, idempotency on retries, SSRF
+              protection on every redirect hop, and fail closed billing, so a charge
+              that errors never delivers a response.
+            </li>
+            <li>
+              Designed the auth layer: site scoped session tokens with expiry, an
+              OAuth style consent flow with strict origin validation, and a browser
+              session gate that meters an ordinary page load without an API client.
+            </li>
+            <li>
+              Wrote the Postgres layer directly, including money in numeric with
+              explicit rounding, row locked balance updates, and a referral ledger.
+            </li>
+          </ul>
+          <p class="tags">
+            <span>SvelteKit</span><span>Supabase</span><span>Postgres</span><span>Cloudflare Workers</span><span>Flutterwave</span>
+          </p>
+        </article>
+
+        <article class="project">
+          <header class="project-head">
+            <h3>PillPal</h3>
+            <p class="role">Mobile developer</p>
+          </header>
+          <p class="project-what">
+            Medication adherence app for patients, with a paired clinician view so a
+            doctor sees the same record their patient is filling in.
+          </p>
+          <ul class="points">
+            <li>
+              Modelled the sync between the two roles in Postgres, so adherence
+              history, schedules and charts stay consistent across devices without
+              the app arbitrating.
+            </li>
+            <li>
+              Built the full Flutter client: scheduling, reminders, adherence charts
+              and the clinician dashboard.
+            </li>
+          </ul>
+          <p class="tags"><span>Flutter</span><span>Supabase</span><span>Postgres</span></p>
+        </article>
+
+        <article class="project">
+          <header class="project-head">
+            <h3>SkateSesh</h3>
+            <p class="role">Prototype engineer &middot; under NDA</p>
+          </header>
+          <p class="project-what">
+            Skateboarding trick detection product. I built the complete working
+            prototype: interface, backend, data model and application logic.
+          </p>
+          <ul class="points">
+            <li>
+              Handed the detection model to a specialist team positioned closer to the
+              client, who needed local access to gather and train on the data. My
+              prototype was the platform they built the algorithm into.
+            </li>
+          </ul>
+          <p class="tags"><span>Flutter</span><span>Supabase</span></p>
+        </article>
+
+        <article class="project">
+          <header class="project-head">
+            <h3>n8n community contributions</h3>
+            <p class="role">Open source</p>
+          </header>
+          <p class="project-what">
+            Published community nodes and workflow templates to the n8n ecosystem,
+            used by other developers building their own automations.
+          </p>
+          <p class="tags"><span>n8n</span><span>Node.js</span><span>TypeScript</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stack -->
+  <section id="stack" class="band band-alt">
+    <div class="wrap">
+      <h2 class="sec-title"><span class="sec-num">02</span> Stack</h2>
+      <dl class="stack">
+        <div><dt>Mobile</dt><dd>Flutter, Dart</dd></div>
+        <div><dt>Web</dt><dd>SvelteKit, TypeScript, JavaScript, HTML and CSS</dd></div>
+        <div><dt>Backend</dt><dd>Supabase, Postgres, PostgREST, Node.js</dd></div>
+        <div><dt>Database</dt><dd>Schema design, RLS, migrations, SQL functions</dd></div>
+        <div><dt>Infra</dt><dd>Cloudflare Workers and Pages, GitHub Actions</dd></div>
+        <div><dt>Payments</dt><dd>Flutterwave, wallets, ledgers, payouts</dd></div>
+        <div><dt>Automation</dt><dd>n8n, Python, Selenium</dd></div>
+        <div><dt>Testing</dt><dd>Vitest, Playwright, CI gates</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- How I work -->
+  <section id="how" class="band">
+    <div class="wrap wrap-narrow">
+      <h2 class="sec-title"><span class="sec-num">03</span> How I work</h2>
+      <p class="big">
+        I develop with Claude Code daily and I am fluent in it: scoping work an
+        agent can execute, driving multi step changes across a codebase, and
+        putting verification around the output rather than trusting it.
+      </p>
+      <p>
+        In practice that means typecheck gates in CI, tests that fail when a guard
+        stops guarding, and browser driven checks proving a page serves rather than
+        merely builds. Catching what an agent gets quietly wrong is what lets me
+        carry a platform this size alone.
+      </p>
+    </div>
+  </section>
+
+  <!-- Life -->
+  <section id="life" class="band band-alt">
+    <div class="wrap">
+      <h2 class="sec-title"><span class="sec-num">04</span> Away from the keyboard</h2>
+      <p class="life-lede">
+        Oyo, and the people I build alongside. Select any picture to open it.
+      </p>
+
+      <ul class="gallery">
+        <li>
+          <button class="tile" type="button"
+                  data-full="images/team-circle.jpg"
+                  data-caption="We're going places. The people I came up with.">
+            <img src="images/team-circle-small.jpg" alt="A circle of friends photographed from below, looking down at the camera" loading="lazy" width="700" height="1123">
+          </button>
+        </li>
+        <li>
+          <button class="tile" type="button"
+                  data-full="images/friends-1.jpg"
+                  data-caption="Out with friends in Oyo.">
+            <img src="images/friends-1-small.jpg" alt="Victor with friends" loading="lazy" width="700" height="525">
+          </button>
+        </li>
+        <li>
+          <button class="tile" type="button"
+                  data-full="images/event.jpg"
+                  data-caption="At a campus event.">
+            <img src="images/event-small.jpg" alt="Victor and a friend at an indoor event" loading="lazy" width="540" height="960">
+          </button>
+        </li>
+        <li>
+          <button class="tile" type="button"
+                  data-full="images/friends-2.jpg"
+                  data-caption="Somewhere in Oyo.">
+            <img src="images/friends-2-small.jpg" alt="Victor with friends" loading="lazy" width="700" height="525">
+          </button>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="band band-dark">
+    <div class="wrap wrap-narrow">
+      <h2 class="contact-title">Available for work.</h2>
+      <p class="contact-sub">Remote, UTC+1. Happy to talk through any of the above in detail.</p>
+      <p class="contact-links">
+        <a href="mailto:victorfolorunsoofficial@gmail.com">victorfolorunsoofficial@gmail.com</a>
+        <a href="https://github.com/victor-folorunso" target="_blank" rel="noopener">github.com/victor-folorunso</a>
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Folorunso Victor Wonderful &middot; Oyo, Nigeria</p>
+    <p><a href="#top">Back to top</a></p>
+  </div>
+</footer>
+
+<!--
+  The lightbox lives in the markup rather than being built by script, so it is
+  present and labelled for assistive technology before any JavaScript runs, and
+  it simply stays hidden if the script never loads.
+-->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo" hidden>
+  <button class="lb-close" type="button" aria-label="Close">&times;</button>
+  <button class="lb-nav lb-prev" type="button" aria-label="Previous photo">&#8249;</button>
+  <figure class="lb-figure">
+    <img id="lb-img" src="" alt="">
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+  <button class="lb-nav lb-next" type="button" aria-label="Next photo">&#8250;</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

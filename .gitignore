@@ -1,0 +1,10 @@
+# The untouched camera originals live outside this folder, in
+# ../portfolio-originals, so the repository carries only the web sized versions.
+images/originals/
+
+# OS and editor noise
+Thumbs.db
+.DS_Store
+desktop.ini
+.vscode/
+.idea/
