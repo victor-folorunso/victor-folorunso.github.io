@@ -15,6 +15,14 @@ images/       Five photographs, each at two sizes
 favicon-32.png, favicon-180.png
 ```
 
+## Files that must stay
+
+`app-ads.txt` (the line that proves the ads in my apps belong to my AdMob
+account) must stay at the root of the published site, whatever happens to
+the design. `/apps/` and `/linking-privacy/` are served by other repos, so
+nothing here may use those names. Details for anyone, or any AI agent,
+editing this repo: `AGENTS.md`.
+
 ## What is hand written
 
 Everything. The parts worth pointing at:
