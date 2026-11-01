@@ -11,7 +11,6 @@ websites/index.html  Every website I built
 theme.css            The shared theme: home, /websites/ and the /apps/ hub
 home.css             Home page only
 images/              Portrait, and website screenshots in images/sites/
-favicon-32.png, favicon-180.png
 app-ads.txt          Must stay (see below)
 ```
 
