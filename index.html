@@ -3,286 +3,220 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Folorunso Victor Wonderful — Flutter and Supabase Engineer</title>
-<meta name="description" content="Flutter and Supabase engineer in Oyo. I build production mobile and web applications, from Postgres schema and row level security through to shipped UI.">
+<title>Folorunso Victor - apps and websites</title>
+<meta name="description" content="I'm Victor, a developer in Oyo, Nigeria. I build Android apps and websites end to end, from the Postgres schema to the screen.">
 
 <meta property="og:type" content="profile">
-<meta property="og:title" content="Folorunso Victor Wonderful, Flutter and Supabase Engineer">
-<meta property="og:description" content="I build production mobile and web applications on Flutter and Supabase, from schema and row level security through to shipped UI.">
+<meta property="og:title" content="Folorunso Victor - apps and websites">
+<meta property="og:description" content="Android apps and websites, built end to end, from the Postgres schema to the screen.">
 <meta property="og:image" content="images/portrait.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="favicon-180.png">
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="home.css">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Folorunso Victor Wonderful",
-  "jobTitle": "Flutter and Supabase Engineer",
+  "jobTitle": "App and web developer",
   "email": "victorfolorunsoofficial@gmail.com",
-  "url": "https://github.com/victor-folorunso",
+  "url": "https://victor-folorunso.github.io/",
+  "sameAs": ["https://github.com/victor-folorunso"],
   "address": { "@type": "PostalAddress", "addressLocality": "Oyo", "addressCountry": "NG" },
-  "knowsAbout": ["Flutter", "Dart", "Supabase", "PostgreSQL", "SvelteKit", "TypeScript", "Cloudflare Workers"]
+  "knowsAbout": ["Flutter", "React Native", "Supabase", "PostgreSQL", "SvelteKit", "TypeScript", "Cloudflare Workers"]
 }
 </script>
 </head>
 
 <body>
-<a class="skip" href="#work">Skip to work</a>
+<a class="skip" href="#main">Skip to content</a>
 
-<header class="bar">
-  <div class="bar-in">
-    <a class="mark" href="#top">
-      <span class="mark-badge">V</span>
-      <span class="mark-name">Folorunso Victor</span>
-    </a>
-    <nav class="nav" aria-label="Sections">
-      <a href="#work">Work</a>
-      <a href="#stack">Stack</a>
-      <a href="#how">How I work</a>
-      <a href="#life">Life</a>
-      <a href="#contact" class="nav-cta">Contact</a>
+<header class="site-bar">
+  <div class="wrap">
+    <a class="site-name" href="/">Victor<span class="full"> Folorunso</span></a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="/apps/">Apps</a>
+      <a href="/websites/">Websites</a>
+      <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<main id="top">
+<main id="main">
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-in">
-      <div class="hero-text">
+  <section class="intro">
+    <div class="wrap">
+      <div>
         <p class="eyebrow">Oyo, Nigeria &middot; Remote, UTC+1</p>
-        <h1>I build production apps on <em>Flutter</em> and <em>Supabase</em>.</h1>
+        <h1>I'm Victor. I build <em>apps</em> and <em>websites</em>, end to end.</h1>
         <p class="lede">
-          From Postgres schema and row level security through to shipped UI. Recent
-          work: a payments platform with per-kilobyte metering and a wallet ledger,
-          a patient adherence app keeping doctor and patient views in sync, and a
-          computer vision product I prototyped end to end.
+          Android apps I publish as wonderperk, and websites for founders and clients.
+          I do the whole thing myself: the Postgres schema and access rules, the
+          payments, the edge, and the screens people actually touch.
         </p>
-        <p class="hero-actions">
+        <p class="actions">
           <a class="btn" href="mailto:victorfolorunsoofficial@gmail.com">Get in touch</a>
           <a class="btn btn-quiet" href="https://github.com/victor-folorunso" target="_blank" rel="noopener">GitHub</a>
         </p>
+        <nav class="doors" aria-label="My work">
+          <a class="door" href="/apps/">
+            <div><b>Apps</b><span>Games and tools on Google Play</span></div>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a class="door" href="/websites/">
+            <div><b>Websites</b><span>Products and client sites</span></div>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </nav>
       </div>
 
       <figure class="portrait">
-        <img src="images/portrait.jpg"
+        <img src="images/portrait-small.jpg"
              srcset="images/portrait-small.jpg 700w, images/portrait.jpg 1400w"
-             sizes="(max-width: 860px) 320px, 38vw"
-             alt="Folorunso Victor Wonderful" width="1400" height="1863">
+             sizes="340px"
+             alt="Folorunso Victor Wonderful" width="700" height="932">
       </figure>
     </div>
   </section>
 
-  <!-- Work -->
-  <section id="work" class="band">
+  <section class="sec" id="apps">
     <div class="wrap">
-      <h2 class="sec-title"><span class="sec-num">01</span> Selected work</h2>
-
-      <div class="projects">
-        <article class="project">
-          <header class="project-head">
-            <h3>Cladior</h3>
-            <p class="role">Founder and sole engineer &middot; 2026</p>
-          </header>
-          <p class="project-what">
-            Payments platform giving third party apps metered billing, shared sign in,
-            saved preferences, a community forum and an app store.
-          </p>
-          <ul class="points">
-            <li>
-              Built the metering proxy on Cloudflare Workers: per-kilobyte accounting,
-              wallet debits inside a single transaction, idempotency on retries, SSRF
-              protection on every redirect hop, and fail closed billing, so a charge
-              that errors never delivers a response.
-            </li>
-            <li>
-              Designed the auth layer: site scoped session tokens with expiry, an
-              OAuth style consent flow with strict origin validation, and a browser
-              session gate that meters an ordinary page load without an API client.
-            </li>
-            <li>
-              Wrote the Postgres layer directly, including money in numeric with
-              explicit rounding, row locked balance updates, and a referral ledger.
-            </li>
-          </ul>
-          <p class="tags">
-            <span>SvelteKit</span><span>Supabase</span><span>Postgres</span><span>Cloudflare Workers</span><span>Flutterwave</span>
-          </p>
-        </article>
-
-        <article class="project">
-          <header class="project-head">
-            <h3>PillPal</h3>
-            <p class="role">Mobile developer</p>
-          </header>
-          <p class="project-what">
-            Medication adherence app for patients, with a paired clinician view so a
-            doctor sees the same record their patient is filling in.
-          </p>
-          <ul class="points">
-            <li>
-              Modelled the sync between the two roles in Postgres, so adherence
-              history, schedules and charts stay consistent across devices without
-              the app arbitrating.
-            </li>
-            <li>
-              Built the full Flutter client: scheduling, reminders, adherence charts
-              and the clinician dashboard.
-            </li>
-          </ul>
-          <p class="tags"><span>Flutter</span><span>Supabase</span><span>Postgres</span></p>
-        </article>
-
-        <article class="project">
-          <header class="project-head">
-            <h3>SkateSesh</h3>
-            <p class="role">Prototype engineer &middot; under NDA</p>
-          </header>
-          <p class="project-what">
-            Skateboarding trick detection product. I built the complete working
-            prototype: interface, backend, data model and application logic.
-          </p>
-          <ul class="points">
-            <li>
-              Handed the detection model to a specialist team positioned closer to the
-              client, who needed local access to gather and train on the data. My
-              prototype was the platform they built the algorithm into.
-            </li>
-          </ul>
-          <p class="tags"><span>Flutter</span><span>Supabase</span></p>
-        </article>
-
-        <article class="project">
-          <header class="project-head">
-            <h3>n8n community contributions</h3>
-            <p class="role">Open source</p>
-          </header>
-          <p class="project-what">
-            Published community nodes and workflow templates to the n8n ecosystem,
-            used by other developers building their own automations.
-          </p>
-          <p class="tags"><span>n8n</span><span>Node.js</span><span>TypeScript</span></p>
-        </article>
+      <div class="sec-head">
+        <div><p class="eyebrow">Featured apps</p><h2>On Google Play, in testing</h2></div>
+        <a class="more" href="/apps/">All apps &rarr;</a>
+      </div>
+      <div class="grid">
+        <a class="tile" href="/apps/linking/" style="--tile-accent:#e0a36a">
+          <div class="tile-media icon"><img src="/apps/linking/icon.png" alt="LINKING icon" loading="lazy"></div>
+          <div class="tile-body"><b class="tile-title">LINKING</b><p class="tile-about">A two-player strategy board game of diagonal lines and clashes. Play the computer, or a friend over Bluetooth.</p></div>
+        </a>
+        <a class="tile" href="/apps/contactsync/" style="--tile-accent:#7d9bff">
+          <div class="tile-media icon"><img src="/apps/contactsync/icon.png" alt="ContactSync icon" loading="lazy"></div>
+          <div class="tile-body"><b class="tile-title">ContactSync</b><p class="tile-about">Meet people in your niche: pick who lands in your phone contacts, and they get your number too.</p></div>
+        </a>
+        <a class="tile" href="/apps/bitnook/" style="--tile-accent:#ffa94d">
+          <div class="tile-media icon"><img src="/apps/bitnook/icon.png" alt="Bitnook icon" loading="lazy"></div>
+          <div class="tile-body"><b class="tile-title">Bitnook</b><p class="tile-about">A shelf of tiny games that live on your phone, passed to a friend the way you'd pass a photo.</p></div>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Stack -->
-  <section id="stack" class="band band-alt">
+  <section class="sec" id="websites">
     <div class="wrap">
-      <h2 class="sec-title"><span class="sec-num">02</span> Stack</h2>
-      <dl class="stack">
-        <div><dt>Mobile</dt><dd>Flutter, Dart</dd></div>
-        <div><dt>Web</dt><dd>SvelteKit, TypeScript, JavaScript, HTML and CSS</dd></div>
-        <div><dt>Backend</dt><dd>Supabase, Postgres, PostgREST, Node.js</dd></div>
-        <div><dt>Database</dt><dd>Schema design, RLS, migrations, SQL functions</dd></div>
-        <div><dt>Infra</dt><dd>Cloudflare Workers and Pages, GitHub Actions</dd></div>
-        <div><dt>Payments</dt><dd>Flutterwave, wallets, ledgers, payouts</dd></div>
-        <div><dt>Automation</dt><dd>n8n, Python, Selenium</dd></div>
-        <div><dt>Testing</dt><dd>Vitest, Playwright, CI gates</dd></div>
-      </dl>
+      <div class="sec-head">
+        <div><p class="eyebrow">Featured websites</p><h2>Live on the web</h2></div>
+        <a class="more" href="/websites/">All websites &rarr;</a>
+      </div>
+      <div class="grid grid-2">
+        <a class="tile" href="https://cladior.com" target="_blank" rel="noopener">
+          <div class="tile-media"><img src="images/sites/cladior.jpg" alt="Cladior home page" loading="lazy" width="1200" height="750"></div>
+          <div class="tile-body"><b class="tile-title">Cladior</b><p class="tile-about">Pay-per-use infrastructure: signs visitors in and charges them for the data a site serves.</p></div>
+        </a>
+        <a class="tile" href="https://vantly.xyz" target="_blank" rel="noopener">
+          <div class="tile-media"><img src="images/sites/vantly.jpg" alt="Vantly home page" loading="lazy" width="1200" height="750"></div>
+          <div class="tile-body"><b class="tile-title">Vantly</b><p class="tile-about">Small file tools that run in your browser. No account, no watermark, no tiny export cap.</p></div>
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- How I work -->
-  <section id="how" class="band">
-    <div class="wrap wrap-narrow">
-      <h2 class="sec-title"><span class="sec-num">03</span> How I work</h2>
-      <p class="big">
-        I develop with Claude Code daily and I am fluent in it: scoping work an
-        agent can execute, driving multi step changes across a codebase, and
-        putting verification around the output rather than trusting it.
-      </p>
-      <p>
-        In practice that means typecheck gates in CI, tests that fail when a guard
-        stops guarding, and browser driven checks proving a page serves rather than
-        merely builds. Catching what an agent gets quietly wrong is what lets me
-        carry a platform this size alone.
-      </p>
-    </div>
-  </section>
-
-  <!-- Life -->
-  <section id="life" class="band band-alt">
+  <section class="sec" id="stack">
     <div class="wrap">
-      <h2 class="sec-title"><span class="sec-num">04</span> Away from the keyboard</h2>
-      <p class="life-lede">
-        Oyo, and the people I build alongside. Select any picture to open it.
-      </p>
-
-      <ul class="gallery">
-        <li>
-          <button class="tile" type="button"
-                  data-full="images/team-circle.jpg"
-                  data-caption="We're going places. The people I came up with.">
-            <img src="images/team-circle-small.jpg" alt="A circle of friends photographed from below, looking down at the camera" loading="lazy" width="700" height="1123">
-          </button>
-        </li>
-        <li>
-          <button class="tile" type="button"
-                  data-full="images/friends-1.jpg"
-                  data-caption="Out with friends in Oyo.">
-            <img src="images/friends-1-small.jpg" alt="Victor with friends" loading="lazy" width="700" height="525">
-          </button>
-        </li>
-        <li>
-          <button class="tile" type="button"
-                  data-full="images/event.jpg"
-                  data-caption="At a campus event.">
-            <img src="images/event-small.jpg" alt="Victor and a friend at an indoor event" loading="lazy" width="540" height="960">
-          </button>
-        </li>
-        <li>
-          <button class="tile" type="button"
-                  data-full="images/friends-2.jpg"
-                  data-caption="Somewhere in Oyo.">
-            <img src="images/friends-2-small.jpg" alt="Victor with friends" loading="lazy" width="700" height="525">
-          </button>
-        </li>
-      </ul>
+      <div class="sec-head">
+        <div><p class="eyebrow">Stack</p><h2>Every layer, from the screen down</h2></div>
+      </div>
+      <div class="stack">
+        <div class="layer">
+          <span class="dot"></span>
+          <h3><small>Screens</small>Mobile and web</h3>
+          <div class="chips"><span>Flutter</span><span>Dart</span><span>React Native</span><span>Expo</span><span>SvelteKit</span><span>TypeScript</span></div>
+          <p>Android apps and web front ends, built to feel fast on an ordinary phone.</p>
+        </div>
+        <div class="layer">
+          <span class="dot"></span>
+          <h3><small>Edge</small>Requests</h3>
+          <div class="chips"><span>Cloudflare Workers</span><span>Pages</span><span>Node.js</span></div>
+          <p>Traffic checked, metered and routed before it ever reaches the database.</p>
+        </div>
+        <div class="layer">
+          <span class="dot"></span>
+          <h3><small>Data</small>Postgres</h3>
+          <div class="chips"><span>Supabase</span><span>PostgreSQL</span><span>Row level security</span><span>SQL functions</span><span>Migrations</span></div>
+          <p>Schema first. Who may read and write what lives in the database, not in the app.</p>
+        </div>
+        <div class="layer">
+          <span class="dot"></span>
+          <h3><small>Money</small>Payments</h3>
+          <div class="chips"><span>Flutterwave</span><span>Wallets</span><span>Ledgers</span><span>Payouts</span></div>
+          <p>Balances in numeric, row-locked updates, retries that never charge twice.</p>
+        </div>
+        <div class="layer">
+          <span class="dot"></span>
+          <h3><small>Glue</small>Automation</h3>
+          <div class="chips"><span>n8n</span><span>Python</span><span>Selenium</span></div>
+          <p>The jobs nobody should do by hand, including published n8n community nodes.</p>
+        </div>
+        <div class="layer">
+          <span class="dot"></span>
+          <h3><small>Proof</small>Testing</h3>
+          <div class="chips"><span>Vitest</span><span>Playwright</span><span>GitHub Actions</span><span>Claude Code</span></div>
+          <p>Typecheck gates in CI, and tests that fail the day a guard stops guarding.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="band band-dark">
-    <div class="wrap wrap-narrow">
-      <h2 class="contact-title">Available for work.</h2>
-      <p class="contact-sub">Remote, UTC+1. Happy to talk through any of the above in detail.</p>
-      <p class="contact-links">
-        <a href="mailto:victorfolorunsoofficial@gmail.com">victorfolorunsoofficial@gmail.com</a>
-        <a href="https://github.com/victor-folorunso" target="_blank" rel="noopener">github.com/victor-folorunso</a>
+  <section class="sec" id="how">
+    <div class="wrap how">
+      <div>
+        <p class="eyebrow">How I work</p>
+        <p class="big" style="margin-top:10px">
+          I develop with Claude Code every day: scoping work an agent can carry out,
+          driving changes across a whole codebase, and checking the output rather
+          than trusting it.
+        </p>
+      </div>
+      <div>
+        <p class="dim">
+          In practice that means typecheck gates in CI, tests that fail when a guard
+          stops guarding, and browser checks proving a page really serves rather than
+          merely builds. Catching what an agent gets quietly wrong is what lets me
+          carry a whole platform alone.
+        </p>
+        <div class="also" style="margin-top:24px">
+          <div><b>PillPal</b><p class="role">Mobile developer</p><p>Medication adherence app with a paired clinician view, kept in sync through Postgres.</p></div>
+          <div><b>SkateSesh</b><p class="role">Prototype engineer, under NDA</p><p>The full working prototype of a skateboarding trick detection product.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec contact" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h2 style="margin-top:10px">Available for work.</h2>
+      <p>Remote, UTC+1. Tell me what you're building and I'll tell you how I'd build it.</p>
+      <p class="actions">
+        <a class="btn" href="mailto:victorfolorunsoofficial@gmail.com">victorfolorunsoofficial@gmail.com</a>
+        <a class="btn btn-quiet" href="https://github.com/victor-folorunso" target="_blank" rel="noopener">github.com/victor-folorunso</a>
       </p>
     </div>
   </section>
 </main>
 
-<footer class="foot">
+<footer class="site-foot">
   <div class="wrap">
-    <p>Folorunso Victor Wonderful &middot; Oyo, Nigeria</p>
-    <p><a href="#top">Back to top</a></p>
+    <span>&copy; Folorunso Victor Wonderful &middot; Oyo, Nigeria</span>
+    <span><a href="/apps/">Apps</a> &middot; <a href="/websites/">Websites</a></span>
   </div>
 </footer>
-
-<!--
-  The lightbox lives in the markup rather than being built by script, so it is
-  present and labelled for assistive technology before any JavaScript runs, and
-  it simply stays hidden if the script never loads.
--->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo" hidden>
-  <button class="lb-close" type="button" aria-label="Close">&times;</button>
-  <button class="lb-nav lb-prev" type="button" aria-label="Previous photo">&#8249;</button>
-  <figure class="lb-figure">
-    <img id="lb-img" src="" alt="">
-    <figcaption id="lb-cap"></figcaption>
-  </figure>
-  <button class="lb-nav lb-next" type="button" aria-label="Next photo">&#8250;</button>
-</div>
-
-<script src="script.js"></script>
 </body>
 </html>

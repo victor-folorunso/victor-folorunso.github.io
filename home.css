@@ -1,0 +1,72 @@
+/* Home page only. Shared pieces live in theme.css. */
+
+/* Intro */
+.intro { padding: 64px 0 56px; }
+.intro .wrap { display: grid; gap: 40px; align-items: center; grid-template-columns: 1fr; }
+@media (min-width: 900px) { .intro .wrap { grid-template-columns: 1.35fr .65fr; gap: 56px; } }
+.intro h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); margin: 14px 0 20px; }
+.intro h1 em { font-style: normal; color: var(--accent); }
+.intro .lede { color: var(--dim); font-size: 1.12rem; max-width: 56ch; }
+.intro .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+.portrait { margin: 0; justify-self: center; width: min(100%, 340px); }
+.portrait img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 24px; border: 1px solid var(--line); }
+
+/* The two doors: Apps and Websites */
+.doors { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); margin-top: 48px; }
+.door {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  padding: 22px 24px; border-radius: var(--radius);
+  background: var(--panel); border: 1px solid var(--line);
+  color: var(--text); text-decoration: none;
+  transition: border-color .2s ease;
+}
+.door:hover { border-color: var(--accent); }
+.door b { font-family: var(--display); font-size: 1.5rem; display: block; }
+.door span { color: var(--dim); }
+.door .arrow { font-size: 1.6rem; color: var(--accent); flex: none; }
+
+/* Stack: the layers a product passes through, from the screen down */
+.stack { position: relative; display: grid; gap: 10px; }
+.stack::before {
+  content: ""; position: absolute; left: 27px; top: 28px; bottom: 28px; width: 2px;
+  background: linear-gradient(var(--accent), var(--line));
+}
+.layer {
+  position: relative; display: grid; gap: 8px 24px; align-items: center;
+  grid-template-columns: 56px 1fr;
+  padding: 18px 20px 18px 0;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 16px;
+}
+.layer .dot {
+  grid-row: span 3; align-self: start; justify-self: center; margin-top: 4px;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--bg); border: 3px solid var(--accent);
+}
+.layer h3 { font-size: 1.25rem; }
+.layer h3 small { display: block; font-family: var(--body); font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--dim); margin-bottom: 4px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chips span { font-size: .85rem; padding: 4px 10px; border-radius: 99px; background: var(--accent-soft); color: var(--text); border: 1px solid rgba(224, 163, 106, .22); }
+.layer p { color: var(--dim); font-size: .95rem; }
+@media (min-width: 900px) {
+  .layer { grid-template-columns: 56px 220px 1fr 1.1fr; padding: 22px 24px 22px 0; }
+  .layer .dot { grid-row: auto; align-self: center; margin-top: 0; }
+}
+
+/* How I work */
+.how { display: grid; gap: 24px; grid-template-columns: 1fr; }
+@media (min-width: 900px) { .how { grid-template-columns: 1fr 1fr; gap: 48px; } }
+.how .big { font-family: var(--display); font-size: clamp(1.3rem, 2.4vw, 1.75rem); line-height: 1.35; }
+.how p + p { margin-top: 14px; }
+
+/* Smaller projects */
+.also { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); }
+.also div { padding: 18px 20px; border: 1px solid var(--line); border-radius: 16px; }
+.also b { font-family: var(--display); font-size: 1.1rem; }
+.also .role { color: var(--accent); font-size: .85rem; margin: 2px 0 8px; }
+.also p:last-child { color: var(--dim); font-size: .95rem; }
+
+/* Contact */
+.contact { text-align: center; }
+.contact h2 { font-size: clamp(2rem, 5vw, 3.2rem); }
+.contact p { color: var(--dim); margin: 12px auto 28px; max-width: 48ch; }
+.contact .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
